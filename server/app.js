@@ -19,7 +19,7 @@ app.use("/booking", bookingsRouter);
 
 mongoose
   .connect(
-    "mongodb+srv://aritrasen2121:5LMDiWuH2gFaBceg@cluster0.foz47n0.mongodb.net/movie?retryWrites=true&w=majority"
+    process.env.MONGO_URL
   )
   .then(() =>
     app.listen(5000, () =>
